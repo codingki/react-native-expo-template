@@ -30,7 +30,9 @@ export default function App() {
 
 	async function midtrans(user) {
 		// url for transactions
+		// this url is for sandbox
 		const url = 'https://app.sandbox.midtrans.com/snap/v1/transactions';
+		// use this url for production : https://app.midtrans.com
 
 		// transactions data
 		const data = {
@@ -82,6 +84,7 @@ export default function App() {
 
 	async function getstatus() {
 		// url for get the status of the transactions
+		// this url is for sandbox
 		const url = `https://api.sandbox.midtrans.com/v2/${orderID}/status`;
 
 		// fetch data
