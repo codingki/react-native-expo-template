@@ -60,8 +60,8 @@ These are the folders and the functionality
 /assets -> for media such as images, etc
 /components -> for components
 |___ /global -> Global components
-		| /navigation -> Navigation components
-		| /utils -> Utility components
+|___ /navigation -> Navigation components
+|___ /utils -> Utility components
 /constants -> for Constants variable
 /navigation -> for React Navigation
 /screens -> for Screens
