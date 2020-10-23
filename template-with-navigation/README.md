@@ -56,26 +56,36 @@ Template starter with React Navigation
 
 These are the folders and the functionality
 
-```html
-/assets -> for media such as images, etc /components -> for components |___
-/global -> Global components | /navigation -> Navigation components | /utils ->
-Utility components /constants -> for Constants variable /navigation -> for React
-Navigation /screens -> for Screens
+```jsx
+/assets -> for media such as images, etc
+/components -> for components
+|___ /global -> Global components
+		| /navigation -> Navigation components
+		| /utils -> Utility components
+/constants -> for Constants variable
+/navigation -> for React Navigation
+/screens -> for Screens
 ```
 
 # Custom Components
 
 ## Layout
 
-[Untitled](https://www.notion.so/61ad086ec54f47c1a0ba3f47564262b4)
+|     props      |  required  |                                  value                                  |
+| :------------: | :--------: | :---------------------------------------------------------------------: |
+| **navigation** |   `true`   |                           **navigation prop**                           |
+|   **title**    | `optional` |      **string** <br> null/false → Top bar navigation not appeared       |
+|  **withBack**  | `optional` | **boolean** <br> true → back icon with back to previous screen function |
 
-```html
-import Layout from '../components/global/Layout'; export default function ({
-navigation }) { return (
-<Layout navigation="{navigation}" title="Home">
-	{/* put your content here */}
-</Layout>
-) }
+```jsx
+import Layout from '../components/global/Layout';
+export default function ({ navigation }) {
+	return (
+		<Layout navigation="{navigation}" title="Home">
+			{/* put your content here */}
+		</Layout>
+	);
+}
 ```
 
 ## Add Custom fonts to your project
