@@ -4,8 +4,18 @@ import { Asset } from 'expo-asset';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import * as Font from 'expo-font';
 import 'moment/locale/id';
-
+import {
+	Ubuntu_300Light,
+	Ubuntu_300Light_Italic,
+	Ubuntu_400Regular,
+	Ubuntu_400Regular_Italic,
+	Ubuntu_500Medium,
+	Ubuntu_500Medium_Italic,
+	Ubuntu_700Bold,
+	Ubuntu_700Bold_Italic,
+} from '@expo-google-fonts/ubuntu';
 import AppNavigator from './navigation/AppNavigator';
 
 export default function App(props) {
@@ -36,6 +46,16 @@ async function loadResourcesAsync() {
 			require('./assets/icon.png'),
 			require('./assets/splash.png'),
 		]),
+		Font.loadAsync({
+			Ubuntu_300Light,
+			Ubuntu_300Light_Italic,
+			Ubuntu_400Regular,
+			Ubuntu_400Regular_Italic,
+			Ubuntu_500Medium,
+			Ubuntu_500Medium_Italic,
+			Ubuntu_700Bold,
+			Ubuntu_700Bold_Italic,
+		}),
 	]);
 }
 

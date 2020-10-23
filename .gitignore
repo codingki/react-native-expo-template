@@ -1,5 +1,9 @@
 withNavigation/node_modules/**/*
 withNavigation/.expo/*
+withNavigation/web-build/
+withBottomTabs/node_modules/**/*
+withBottomTabs/.expo/*
+withBottomTabs/web-build/
 npm-debug.*
 *.jks
 *.p8
@@ -7,7 +11,7 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
-withNavigation/web-build/
+
 
 # macOS
 .DS_Store
