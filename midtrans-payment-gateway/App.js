@@ -42,7 +42,7 @@ export default function App() {
 			},
 			item_details: [
 				{
-					id: 'ORDERID1',
+					id: 'PRODUCTID1',
 					price: 20000,
 					quantity: 1,
 					name: 'Product 1',
@@ -50,7 +50,7 @@ export default function App() {
 					merchant_name: 'Merchant',
 				},
 				{
-					id: 'ORDERID2',
+					id: 'PRODUCTID2',
 					price: 40000,
 					quantity: 1,
 					name: 'Product 2',
