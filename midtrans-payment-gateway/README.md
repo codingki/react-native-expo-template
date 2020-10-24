@@ -1,6 +1,6 @@
 # midtrans-payment-gateway
 
-SNAP Midtrans payment gateway client side (this is not the best way to do this, better all the midtrans API processed on a cloud functions for better performance \*I think)
+SNAP Midtrans payment gateway example on client side (this is not the best way to do this, better all the midtrans API processed on a cloud functions for better performance \*I think)
 
 ## Preview
 
