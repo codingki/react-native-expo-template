@@ -60,6 +60,10 @@ There are 3 screens included inside `./screens/auth` and one more thing its incl
 
 I personally use these screens on my project [TiktTeng](https://github.com/codingki/TikTeng) in early stages before the redesign, feel free to use these screens ❤️
 
+### React Navigation Auth Flow
+
+The checking logged users process is inside `./provider/AuthProvider` I use React Context, you can add more functions like get the data of the user and store it to the context (better static data, ex: uid)
+
 Inside the navigator `./navigation/AppNavigator.js`
 There's 2 stack navigator :
 
