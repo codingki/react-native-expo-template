@@ -2,11 +2,11 @@
 
 Template starter with React Navigation Bottom Tabs
 
-## Preview
+# Preview
 
-![../media/bottomtabs.gif](../media/bottomtabs.gif)
+![../media/bottomtabs.gif](../media/bottomtabs.gif | width=200)
 
-## Usage
+# Installation
 
 1. Install [node.js](https://nodejs.org/en/)
 2. Install Expo
@@ -27,45 +27,6 @@ Template starter with React Navigation Bottom Tabs
    ```jsx
    expo start
    ```
-
-## Package used
-
-```jsx
-"dependencies": {
-    "@expo-google-fonts/ubuntu": "^0.1.0",
-    "@react-native-community/masked-view": "0.1.10",
-    "@react-navigation/native": "^5.7.6",
-    "@react-navigation/stack": "^5.9.3",
-    "expo": "~39.0.2",
-    "expo-status-bar": "~1.0.2",
-    "firebase": "7.9.0",
-    "lodash": "^4.17.20",
-    "moment": "^2.29.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
-    "react-native-gesture-handler": "~1.7.0",
-    "react-native-reanimated": "~1.13.0",
-    "react-native-safe-area-context": "3.1.4",
-    "react-native-screens": "~2.10.1",
-    "react-native-web": "~0.13.12"
-  }
-```
-
-## File Managements
-
-These are the folders and the functionality
-
-```jsx
-/assets -> for media such as images, etc
-/components -> for components
-|___ /global -> Global components
-|___ /navigation -> Navigation components
-|___ /utils -> Utility components
-/constants -> for Constants variable
-/navigation -> for React Navigation
-/screens -> for Screens
-```
 
 # Custom Components
 
@@ -88,7 +49,7 @@ export default function ({ navigation }) {
 }
 ```
 
-## Add Custom fonts to your project
+# Add Custom fonts to your project
 
 > Custom font I used in this template is "Ubuntu" (Google fonts)
 
@@ -154,6 +115,45 @@ export default function ({ navigation }) {
    		]}
    />
    ```
+
+# Package used
+
+```jsx
+"dependencies": {
+    "@expo-google-fonts/ubuntu": "^0.1.0",
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/native": "^5.7.6",
+    "@react-navigation/stack": "^5.9.3",
+    "expo": "~39.0.2",
+    "expo-status-bar": "~1.0.2",
+    "firebase": "7.9.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
+    "react-native-gesture-handler": "~1.7.0",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-safe-area-context": "3.1.4",
+    "react-native-screens": "~2.10.1",
+    "react-native-web": "~0.13.12"
+  }
+```
+
+# File Managements
+
+These are the folders and the functionality
+
+```jsx
+/assets -> for media such as images, etc
+/components -> for components
+|___ /global -> Global components
+|___ /navigation -> Navigation components
+|___ /utils -> Utility components
+/constants -> for Constants variable
+/navigation -> for React Navigation
+/screens -> for Screens
+```
 
 if you find these useful don't forget to give it a star ⭐ and share it to your friends ❤️
 

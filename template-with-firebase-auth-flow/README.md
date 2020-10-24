@@ -1,10 +1,10 @@
-# template-with-navigation
+# template-firebase-auth-flow
 
-Template starter with React Navigation
+Template starter with React Navigation and Firebase auth using React Context
 
 # Preview
 
-![../media/withnav.gif](../media/withnav.gif)
+![../media/authflow.png](../media/authflow.png)
 
 # Installation
 
@@ -28,6 +28,60 @@ Template starter with React Navigation
    expo start
    ```
 
+# Auth Flow
+
+### Usage
+
+- Set up a new firebase project
+- Go to Authentication and under Sign-in Method enable Email/Password
+- Fill this firebase config to your config inside `./navigation/AppNavigator.js`
+
+      ```jsx
+      const firebaseConfig = {
+      	apiKey: '',
+      	authDomain: '',
+      	databaseURL: '',
+      	projectId: '',
+      	storageBucket: '',
+      	messagingSenderId: '',
+      	appId: '',
+      };
+      ```
+
+  and you good to go!
+
+### Prebuilt UI Screens
+
+There are 3 screens included inside `./screens/auth` and one more thing its included with the firebase auth function, so you don't need to create the function. The ilustrations I use [undraw](https://undraw.co/)
+
+- Login screen `./screens/auth/login.js`
+- Register screen `./screens/auth/register.js`
+- Forget password screen `./screens/auth/forget.js`
+
+I personally use these screens on my project [TiktTeng](https://github.com/codingki/TikTeng) in early stages before the redesign, feel free to use these screens ❤️
+
+Inside the navigator `./navigation/AppNavigator.js`
+There's 2 stack navigator :
+
+- `<Auth/>` → for not logged in users stack
+- `<Main/>` → for logged in users stack
+- `<Loading/>` → for loading screen
+
+```
+export default () => {
+	const auth = useContext(AuthContext);
+	const user = auth.user;
+	return (
+		<NavigationContainer>
+			{user == null && <Loading />}
+			{user == false && <Auth />}
+			{user == true && <Main />}
+		</NavigationContainer>
+	);
+};
+
+```
+
 # Custom Components
 
 ## Layout
@@ -49,7 +103,7 @@ export default function ({ navigation }) {
 }
 ```
 
-# Add Custom fonts to your project
+## Add Custom fonts to your project
 
 > Custom font I used in this template is "Ubuntu" (Google fonts)
 
@@ -152,6 +206,7 @@ These are the folders and the functionality
 |___ /utils -> Utility components
 /constants -> for Constants variable
 /navigation -> for React Navigation
+/provider -> for React Context
 /screens -> for Screens
 ```
 
