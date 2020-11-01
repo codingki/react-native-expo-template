@@ -48,6 +48,7 @@ Bonus Snap Midtrans payment gateway😘
 - [template-with-bottom-tabs](https://github.com/codingki/react-native-expo-template/tree/master/template-with-bottom-tabs)
 - [midtrans-payment-gateway](https://github.com/codingki/react-native-expo-template/tree/master/midtrans-payment-gateway)
 - [template-with-firebase-auth-flow](https://github.com/codingki/react-native-expo-template/tree/master/template-with-firebase-auth-flow)
+- [template-with-bottom-tabs-auth-flow](https://github.com/codingki/react-native-expo-template/tree/master/template-with-bottom-tabs-auth-flow)
 
 if you find these useful don't forget to give it a star ⭐ and share it to your friends ❤️
 
