@@ -1,4 +1,4 @@
-# midtrans-payment-gateway
+# Midtrans Payment gateway example
 
 SNAP Midtrans payment gateway example on client side (this is not the best way to do this, better all the midtrans API processed on a cloud functions for better performance \*I think)
 

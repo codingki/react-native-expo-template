@@ -1,4 +1,4 @@
-# template-with-navigation
+# Template Blank with navigation
 
 Template starter with React Navigation
 

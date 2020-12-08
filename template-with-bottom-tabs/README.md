@@ -1,4 +1,4 @@
-# template-with-bottom-tabs
+# Template Bottom tabs
 
 Template starter with React Navigation Bottom Tabs
 

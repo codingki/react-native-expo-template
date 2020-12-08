@@ -1,4 +1,4 @@
-# template-firebase-auth-flow
+# Template Firebase auth flow
 
 Template starter with React Navigation and Firebase auth using React Context
 

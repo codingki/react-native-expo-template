@@ -1,4 +1,4 @@
-# template-firebase-auth-flow
+# Template Bottom tabs with auth flow
 
 Template starter with React Navigation Bottom Tabs and Firebase auth using React Context
 
