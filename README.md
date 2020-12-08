@@ -27,7 +27,7 @@ Bonus Snap Midtrans payment gateway😘
    npm install --global expo-cli
    ```
 
-3. Download this repo
+3. Download the template choose
 4. Install deps on your template folder
 
    ```jsx
@@ -42,13 +42,19 @@ Bonus Snap Midtrans payment gateway😘
 
 ## Documentation
 
-> There are some costum components I made
+> Note: There are some custom components I made
 
-- [template-with-navigation](https://github.com/codingki/react-native-expo-template/tree/master/template-with-navigation)
-- [template-with-bottom-tabs](https://github.com/codingki/react-native-expo-template/tree/master/template-with-bottom-tabs)
-- [midtrans-payment-gateway](https://github.com/codingki/react-native-expo-template/tree/master/midtrans-payment-gateway)
-- [template-with-firebase-auth-flow](https://github.com/codingki/react-native-expo-template/tree/master/template-with-firebase-auth-flow)
-- [template-with-bottom-tabs-auth-flow](https://github.com/codingki/react-native-expo-template/tree/master/template-with-bottom-tabs-auth-flow)
+### Typescript
+
+- [Template bottom tabs with auth flow (Typescript)](https://github.com/codingki/react-native-expo-template/tree/master/template-typescript-bottom-tabs-with-auth-flow)
+
+### Javascript
+
+- [Template Blank with navigation](https://github.com/codingki/react-native-expo-template/tree/master/template-with-navigation)
+- [Template Bottom tabs](https://github.com/codingki/react-native-expo-template/tree/master/template-with-bottom-tabs)
+- [Template Firebase auth flow](https://github.com/codingki/react-native-expo-template/tree/master/template-with-firebase-auth-flow)
+- [Template Bottom tabs with auth flow](https://github.com/codingki/react-native-expo-template/tree/master/template-with-bottom-tabs-auth-flow)
+- [Midtrans Payment gateway example](https://github.com/codingki/react-native-expo-template/tree/master/midtrans-payment-gateway)
 
 if you find these useful don't forget to give it a star ⭐ and share it to your friends ❤️
 
