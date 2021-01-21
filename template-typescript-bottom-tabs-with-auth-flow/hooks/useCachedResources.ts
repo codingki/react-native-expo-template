@@ -25,22 +25,24 @@ export default function useCachedResources() {
 
 				// Load fonts
 
-				Asset.loadAsync([
-					require('../assets/images/login.png'),
-					require('../assets/images/register.png'),
-					require('../assets/images/forget.png'),
+				await Promise.all([
+					Asset.loadAsync([
+						require('../assets/images/login.png'),
+						require('../assets/images/register.png'),
+						require('../assets/images/forget.png'),
+					]),
+					Font.loadAsync({
+						...Ionicons.font,
+						Ubuntu_300Light,
+						Ubuntu_300Light_Italic,
+						Ubuntu_400Regular,
+						Ubuntu_400Regular_Italic,
+						Ubuntu_500Medium,
+						Ubuntu_500Medium_Italic,
+						Ubuntu_700Bold,
+						Ubuntu_700Bold_Italic,
+					}),
 				]);
-				Font.loadAsync({
-					...Ionicons.font,
-					Ubuntu_300Light,
-					Ubuntu_300Light_Italic,
-					Ubuntu_400Regular,
-					Ubuntu_400Regular_Italic,
-					Ubuntu_500Medium,
-					Ubuntu_500Medium_Italic,
-					Ubuntu_700Bold,
-					Ubuntu_700Bold_Italic,
-				});
 			} catch (e) {
 				// We might want to provide this error information to an error reporting service
 				console.warn(e);
