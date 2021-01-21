@@ -20,14 +20,14 @@ SNAP midtrans gives response a url for the payment gateway you can use `react-na
 
 ```jsx
 "dependencies": {
-    "base-64": "^1.0.0",
-    "expo": "~39.0.2",
-    "expo-status-bar": "~1.0.2",
+   "base-64": "^1.0.0",
+    "expo": "^40.0.0",
+    "expo-status-bar": "~1.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-web": "~0.13.12",
-    "react-native-webview": "10.7.0"
+    "react-native-webview": "11.0.0"
 }
 ```
 

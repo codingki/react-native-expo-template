@@ -179,23 +179,27 @@ export default function ({ navigation }) {
 ```jsx
 "dependencies": {
     "@expo-google-fonts/ubuntu": "^0.1.0",
+    "@expo/vector-icons": "^12.0.0",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-navigation/bottom-tabs": "^5.10.2",
-    "@react-navigation/native": "^5.7.6",
-    "@react-navigation/stack": "^5.9.3",
-    "expo": "~39.0.2",
-    "expo-status-bar": "~1.0.2",
-    "firebase": "7.9.0",
-    "lodash": "^4.17.20",
-    "moment": "^2.29.1",
+    "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/stack": "^5.9.0",
+    "expo": "^40.0.0",
+    "expo-asset": "~8.2.1",
+    "expo-constants": "~9.3.3",
+    "expo-font": "~8.4.0",
+    "expo-linking": "~2.0.0",
+    "expo-splash-screen": "~0.8.1",
+    "expo-status-bar": "~1.0.3",
+    "expo-web-browser": "~8.6.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
-    "react-native-gesture-handler": "~1.7.0",
-    "react-native-reanimated": "~1.13.0",
-    "react-native-safe-area-context": "3.1.4",
-    "react-native-screens": "~2.10.1",
-    "react-native-web": "~0.13.12"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-gesture-handler": "~1.8.0",
+    "react-native-safe-area-context": "3.1.9",
+    "react-native-screens": "~2.15.0",
+    "react-native-web": "~0.13.12",
+    "firebase": "7.9.0"
   }
 ```
 

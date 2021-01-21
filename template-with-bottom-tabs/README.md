@@ -119,23 +119,25 @@ export default function ({ navigation }) {
 # Package used
 
 ```jsx
-"dependencies": {
+ "dependencies": {
     "@expo-google-fonts/ubuntu": "^0.1.0",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/bottom-tabs": "^5.9.2",
     "@react-navigation/native": "^5.7.6",
     "@react-navigation/stack": "^5.9.3",
-    "expo": "~39.0.2",
-    "expo-status-bar": "~1.0.2",
+    "expo": "^40.0.0",
+    "expo-app-loading": "^1.0.1",
+    "expo-status-bar": "~1.0.3",
     "firebase": "7.9.0",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
-    "react-native-gesture-handler": "~1.7.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-gesture-handler": "~1.8.0",
     "react-native-reanimated": "~1.13.0",
-    "react-native-safe-area-context": "3.1.4",
-    "react-native-screens": "~2.10.1",
+    "react-native-safe-area-context": "3.1.9",
+    "react-native-screens": "~2.15.0",
     "react-native-web": "~0.13.12"
   }
 ```
