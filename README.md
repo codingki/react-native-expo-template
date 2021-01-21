@@ -53,6 +53,7 @@ Bonus Snap Midtrans payment gateway😘
 ### Typescript
 
 - [Template bottom tabs with auth flow (Typescript)](https://github.com/codingki/react-native-expo-template/tree/master/template-typescript-bottom-tabs-with-auth-flow)
+- [Template bottom tabs with Supabase.io auth flow (Typescript)](https://github.com/codingki/react-native-expo-template/tree/master/template-typescript-bottom-tabs-supabase-auth-flow)
 
 ### Javascript
 
