@@ -15,6 +15,7 @@ Bonus Snap Midtrans payment gateway😘
 
 - Typescript bottom tabs with auth flow template added (08/12/2020)
 - Updated to expo sdk 40 (21/01/2021)
+- Added typescript bottom tabs with supabase auth flow template (21/01/2021)
 
 ## Included
 
