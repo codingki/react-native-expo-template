@@ -17,7 +17,6 @@ const Main = () => {
 	return (
 		<MainStack.Navigator
 			screenOptions={{
-				headerMode: 'none',
 				headerShown: false,
 			}}
 		>
@@ -58,7 +57,7 @@ const MainTabs = () => {
 						<TabBarText focused={focused} title="Profile" />
 					),
 					tabBarIcon: ({ focused }) => (
-						<TabBarIcon focused={focused} icon={'ios-contact'} />
+						<TabBarIcon focused={focused} icon={'person'} />
 					),
 				}}
 			/>

@@ -10,7 +10,6 @@ import Loading from '../screens/utils/Loading';
 const firebaseConfig = {
 	apiKey: '',
 	authDomain: '',
-	databaseURL: '',
 	projectId: '',
 	storageBucket: '',
 	messagingSenderId: '',

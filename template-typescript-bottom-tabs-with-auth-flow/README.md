@@ -36,19 +36,19 @@ Typescript Template starter with React Navigation Bottom Tabs and Firebase auth 
 - Go to Authentication and under Sign-in Method enable Email/Password
 - Fill this firebase config to your config inside `./navigation/index.tsx`
 
-      ```jsx
-      const firebaseConfig = {
-      	apiKey: '',
-      	authDomain: '',
-      	databaseURL: '',
-      	projectId: '',
-      	storageBucket: '',
-      	messagingSenderId: '',
-      	appId: '',
-      };
-      ```
+  ```jsx
+  const firebaseConfig = {
+  	apiKey: '',
+  	authDomain: '',
+  	databaseURL: '',
+  	projectId: '',
+  	storageBucket: '',
+  	messagingSenderId: '',
+  	appId: '',
+  };
+  ```
 
-  and you good to go!
+and you good to go!
 
 ### Prebuilt UI Screens
 

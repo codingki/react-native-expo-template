@@ -11,7 +11,6 @@ const Main = () => {
 	return (
 		<MainStack.Navigator
 			screenOptions={{
-				headerMode: 'none',
 				headerShown: false,
 			}}
 		>

@@ -35,7 +35,6 @@ const Auth = () => {
 	return (
 		<AuthStack.Navigator
 			screenOptions={{
-				headerMode: 'none',
 				headerShown: false,
 			}}
 		>
@@ -52,7 +51,6 @@ const Main = () => {
 	return (
 		<MainStack.Navigator
 			screenOptions={{
-				headerMode: 'none',
 				headerShown: false,
 			}}
 		>

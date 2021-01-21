@@ -11,6 +11,11 @@ Bonus Snap Midtrans payment gateway😘
 **Firebase auth flow**
 ![media/authflow.png](media/authflow.png)
 
+## Update
+
+- Typescript bottom tabs with auth flow template added (08/12/2020)
+- Updated to expo sdk 40 (21/01/2021)
+
 ## Included
 
 - Pre-loading and Caching Assets
