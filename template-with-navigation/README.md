@@ -28,12 +28,12 @@ Template starter with React Navigation
    expo start
    ```
 
-# Rapi UI
+## Rapi UI
 
-!(RapiUI)[../media/hero.png]
+![../media/hero.png](../media/hero.png)
 
-These UI components are provided by (Rapi UI)[https://rapi-ui.kikiding.space/].
-Check the (documentation)[https://rapi-ui.kikiding.space/docs/] for usage and more components.
+These UI components are provided by [Rapi UI](https://rapi-ui.kikiding.space/).
+Check the [documentation](https://rapi-ui.kikiding.space/docs/) for usage and more components.
 
 # File Managements
 
