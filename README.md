@@ -37,8 +37,6 @@ Check the [documentation](https://rapi-ui.kikiding.space/docs/) for usage and mo
 
 ## Documentation
 
-> Note: There are some custom components I made
-
 ### Typescript
 
 - [Template bottom tabs with auth flow (Typescript)](https://github.com/codingki/react-native-expo-template/tree/master/template-typescript-bottom-tabs-with-auth-flow)
