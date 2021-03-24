@@ -1,10 +1,10 @@
 import React from 'react';
-import Colors from '../../constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
+import { theme } from 'react-native-rapi-ui';
 
 interface Props {
 	focused: boolean;
-	icon: string;
+	icon: any;
 }
 
 export default (props: Props) => {
@@ -13,7 +13,7 @@ export default (props: Props) => {
 			name={props.icon}
 			style={{ marginBottom: -7 }}
 			size={24}
-			color={props.focused ? Colors.ActiveTab : Colors.inActiveTab}
+			color={props.focused ? theme.primary : 'rgb(143, 155, 179)'}
 		/>
 	);
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Colors from '../constants/Colors';
+import { theme } from 'react-native-rapi-ui';
 import TabBarIcon from '../components/utils/TabBarIcon';
 import TabBarText from '../components/utils/TabBarText';
 
@@ -16,7 +16,7 @@ const MainTabs = () => {
 			tabBarOptions={{
 				tabStyle: { borderTopWidth: 0 },
 				style: { borderTopWidth: 1, borderColor: '#c0c0c0' },
-				activeTintColor: Colors.primary,
+				activeTintColor: theme.primary,
 			}}
 		>
 			{/* these icons using Ionicons */}

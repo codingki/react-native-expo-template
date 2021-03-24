@@ -17,7 +17,7 @@ const AuthProvider = (props: Props) => {
 
 	useEffect(() => {
 		checkLogin();
-	}, [user]);
+	}, []);
 
 	function checkLogin() {
 		firebase.auth().onAuthStateChanged(function (u) {

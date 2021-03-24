@@ -1,6 +1,5 @@
 import React from 'react';
-import Colors from '../../constants/Colors';
-import Text from './StyledText';
+import { Text, theme } from 'react-native-rapi-ui';
 
 interface Props {
 	focused: boolean;
@@ -10,10 +9,10 @@ interface Props {
 export default (props: Props) => {
 	return (
 		<Text
-			bold
+			fontWeight="bold"
 			style={{
 				marginBottom: 5,
-				color: props.focused ? Colors.ActiveTab : Colors.inActiveTab,
+				color: props.focused ? theme.primary : 'rgb(143, 155, 179)',
 				fontSize: 10,
 			}}
 		>

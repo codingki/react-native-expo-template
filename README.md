@@ -13,38 +13,18 @@ Bonus Snap Midtrans payment gateway😘
 
 ## Update
 
-- Typescript bottom tabs with auth flow template added (08/12/2020)
-- Updated to expo sdk 40 (21/01/2021)
+- Now all the UI components uses (Rapi UI)[https://rapi-ui.kikiding.space/] (24/03/2021)
+- Fixed some bugs and file managements moved to `src/` directory (24/03/2021)
 - Added typescript bottom tabs with supabase auth flow template (21/01/2021)
+- Updated to expo sdk 40 (21/01/2021)
+- Typescript bottom tabs with auth flow template added (08/12/2020)
 
-## Included
+## Rapi UI
 
-- Pre-loading and Caching Assets
-- Example using Custom Fonts
-- Layout Component safe area
-- Top Navigation component
+!(rapiUI)[https://github.com/codingki/react-native-rapi-ui/blob/master/media/hero.png]
 
-## Usage
-
-1. Install [node.js](https://nodejs.org/en/)
-2. Install Expo
-
-   ```jsx
-   npm install --global expo-cli
-   ```
-
-3. Download the template choose
-4. Install deps on your template folder
-
-   ```jsx
-   npm install
-   ```
-
-5. Start the environtment
-
-   ```jsx
-   expo start
-   ```
+These UI components are provided by (Rapi UI)[https://rapi-ui.kikiding.space/].
+Check the (documentation)[https://rapi-ui.kikiding.space/docs/] for usage and more components.
 
 ## Documentation
 

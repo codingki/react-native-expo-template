@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-	StyleSheet,
-	TouchableOpacity,
-	View,
-	ActivityIndicator,
-} from 'react-native';
-import Layout from '../../components/global/Layout';
-import Colors from '../../constants/Colors';
+import { View, ActivityIndicator } from 'react-native';
+import { Layout, theme } from 'react-native-rapi-ui';
 
 export default function () {
 	return (
@@ -18,7 +12,7 @@ export default function () {
 					justifyContent: 'center',
 				}}
 			>
-				<ActivityIndicator size="large" color={Colors.primary} />
+				<ActivityIndicator size="large" color={theme.primary} />
 			</View>
 		</Layout>
 	);

@@ -28,132 +28,23 @@ Template starter with React Navigation
    expo start
    ```
 
-# Custom Components
+# Rapi UI
 
-## Layout
+!(rapiUI)[https://github.com/codingki/react-native-rapi-ui/blob/master/media/hero.png]
 
-|     props      |  required  |                                  value                                  |
-| :------------: | :--------: | :---------------------------------------------------------------------: |
-| **navigation** |   `true`   |                           **navigation prop**                           |
-|   **title**    | `optional` |      **string** <br> null/false → Top bar navigation not appeared       |
-|  **withBack**  | `optional` | **boolean** <br> true → back icon with back to previous screen function |
-
-```jsx
-import Layout from '../components/global/Layout';
-export default function ({ navigation }) {
-	return (
-		<Layout navigation="{navigation}" title="Home">
-			{/* put your content here */}
-		</Layout>
-	);
-}
-```
-
-# Add Custom fonts to your project
-
-> Custom font I used in this template is "Ubuntu" (Google fonts)
-
-1. Find your google fonts [here](https://directory.now.sh/)
-2. Install the font
-
-   ```jsx
-   expo install @expo-google-fonts/YOUR_CHOICE expo-font
-   ```
-
-3. Add to your project. Example in App.js
-
-   ```jsx
-   ...
-   import {
-   	Ubuntu_300Light,
-   	Ubuntu_300Light_Italic,
-   	Ubuntu_400Regular,
-   	Ubuntu_400Regular_Italic,
-   	Ubuntu_500Medium,
-   	Ubuntu_500Medium_Italic,
-   	Ubuntu_700Bold,
-   	Ubuntu_700Bold_Italic,
-   } from '@expo-google-fonts/ubuntu';
-
-   ...
-
-   ...
-   	async function loadResourcesAsync() {
-   		...
-   		Font.loadAsync({
-   			Ubuntu_300Light,
-   			Ubuntu_300Light_Italic,
-   			Ubuntu_400Regular,
-   			Ubuntu_400Regular_Italic,
-   			Ubuntu_500Medium,
-   			Ubuntu_500Medium_Italic,
-   			Ubuntu_700Bold,
-   			Ubuntu_700Bold_Italic,
-   			}),
-   		]);
-   	}
-   	...
-   ...
-   ```
-
-4. Edit the Custom Font component
-5. Edit the font family
-
-   ```jsx
-   <Text
-   	{...props}
-   		style={[props.style,
-   			{
-   				fontFamily: props.bold
-   				? 'Ubuntu_700Bold' <-- EDIT THIS
-   				: props.medium
-   				? 'Ubuntu_500Medium' <-- EDIT THIS
-   				: props.light
-   				? 'Ubuntu_300Light' <-- EDIT THIS
-   				: 'Ubuntu_400Regular' <-- EDIT THIS
-   			},
-   		]}
-   />
-   ```
-
-# Package used
-
-```jsx
-"dependencies": {
-    "@expo-google-fonts/ubuntu": "^0.1.0",
-    "@react-native-community/masked-view": "0.1.10",
-    "@react-navigation/native": "^5.7.6",
-    "@react-navigation/stack": "^5.9.3",
-    "expo": "^40.0.0",
-    "expo-app-loading": "^1.0.1",
-    "expo-status-bar": "~1.0.3",
-    "firebase": "7.9.0",
-    "lodash": "^4.17.20",
-    "moment": "^2.29.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
-    "react-native-gesture-handler": "~1.8.0",
-    "react-native-reanimated": "~1.13.0",
-    "react-native-safe-area-context": "3.1.9",
-    "react-native-screens": "~2.15.0",
-    "react-native-web": "~0.13.12"
-  }
-```
+These UI components are provided by (Rapi UI)[https://rapi-ui.kikiding.space/].
+Check the (documentation)[https://rapi-ui.kikiding.space/docs/] for usage and more components.
 
 # File Managements
 
 These are the folders and the functionality
 
 ```jsx
-/assets -> for media such as images, etc
-/components -> for components
-|___ /global -> Global components
-|___ /navigation -> Navigation components
-|___ /utils -> Utility components
-/constants -> for Constants variable
-/navigation -> for React Navigation
-/screens -> for Screens
+/src/assets -> for media such as images, etc
+/src/components -> for components
+/src/navigation -> for React Navigation
+/src/provider -> for React Context
+/src/screens -> for Screens
 ```
 
 if you find these useful don't forget to give it a star ⭐ and share it to your friends ❤️
