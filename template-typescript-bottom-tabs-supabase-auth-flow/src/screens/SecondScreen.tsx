@@ -2,15 +2,21 @@ import React from 'react';
 import { View } from 'react-native';
 import { MainStackParamList } from '../types/navigation';
 import { StackScreenProps } from '@react-navigation/stack';
-
-import Layout from '../components/global/Layout';
-import Text from '../components/utils/StyledText';
+import { Layout, TopNav, Text, theme } from 'react-native-rapi-ui';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function ({
 	navigation,
 }: StackScreenProps<MainStackParamList, 'SecondScreen'>) {
 	return (
-		<Layout navigation={navigation} title="Second Screen" withBack>
+		<Layout>
+			<TopNav
+				middleContent="Second Screen"
+				leftContent={
+					<Ionicons name="chevron-back" size={20} color={theme.black} />
+				}
+				leftAction={() => navigation.goBack()}
+			/>
 			<View
 				style={{
 					flex: 1,
@@ -19,8 +25,7 @@ export default function ({
 				}}
 			>
 				{/* This text using ubuntu font */}
-				<Text bold>This is the second screen</Text>
-				<Text>The top navigation have back action</Text>
+				<Text fontWeight="bold">This is the second screen</Text>
 			</View>
 		</Layout>
 	);

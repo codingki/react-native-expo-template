@@ -5,18 +5,13 @@ import {
 	TouchableOpacity,
 	View,
 	KeyboardAvoidingView,
-	ActivityIndicator,
-	TextInput,
 	Image,
-	StyleSheet,
 } from 'react-native';
 import * as firebase from 'firebase';
 import { AuthStackParamList } from '../../types/navigation';
 import { StackScreenProps } from '@react-navigation/stack';
 
-import Layout from '../../components/global/Layout';
-import Text from '../../components/utils/StyledText';
-import Colors from '../../constants/Colors';
+import { Layout, Text, TextInput, Button } from 'react-native-rapi-ui';
 
 export default function ({
 	navigation,
@@ -42,7 +37,7 @@ export default function ({
 	return (
 		<KeyboardAvoidingView behavior="height" enabled style={{ flex: 1 }}>
 			<StatusBar style="auto" translucent backgroundColor="#f7f7f7" />
-			<Layout navigation={navigation}>
+			<Layout>
 				<ScrollView
 					contentContainerStyle={{
 						flexGrow: 1,
@@ -74,50 +69,36 @@ export default function ({
 						}}
 					>
 						<Text
-							bold
+							size="h3"
+							fontWeight="bold"
 							style={{
-								fontSize: 24,
-								color: Colors.black,
 								alignSelf: 'center',
 								padding: 30,
 							}}
 						>
 							Forget Password
 						</Text>
-						<Text style={{ color: Colors.black, fontSize: 16 }}>Email</Text>
-						<View style={styles.textInputContainer}>
-							<TextInput
-								style={styles.textInput}
-								placeholder="Enter your email"
-								value={email}
-								autoCapitalize="none"
-								autoCompleteType="off"
-								autoCorrect={false}
-								keyboardType="email-address"
-								onChangeText={(text) => setEmail(text)}
-							/>
-						</View>
-
-						<TouchableOpacity
+						<Text>Email</Text>
+						<TextInput
+							containerStyle={{ marginTop: 15 }}
+							placeholder="Enter your email"
+							value={email}
+							autoCapitalize="none"
+							autoCompleteType="off"
+							autoCorrect={false}
+							keyboardType="email-address"
+							onChangeText={(text) => setEmail(text)}
+						/>
+						<Button
+							text={loading ? 'Loading' : 'Send email'}
 							onPress={() => {
 								forget();
 							}}
-							disabled={loading}
 							style={{
-								flexDirection: 'row',
 								marginTop: 20,
 							}}
-						>
-							<View style={styles.button}>
-								{loading ? (
-									<ActivityIndicator color="#fff" />
-								) : (
-									<Text bold style={{ fontSize: 16, color: 'white' }}>
-										Send email
-									</Text>
-								)}
-							</View>
-						</TouchableOpacity>
+							disabled={loading}
+						/>
 
 						<View
 							style={{
@@ -127,23 +108,17 @@ export default function ({
 								justifyContent: 'center',
 							}}
 						>
-							<Text
-								style={{
-									color: Colors.black,
-								}}
-							>
-								Already have an account?
-							</Text>
+							<Text size="md">Already have an account?</Text>
 							<TouchableOpacity
 								onPress={() => {
 									navigation.navigate('Login');
 								}}
 							>
 								<Text
-									bold
+									size="md"
+									fontWeight="bold"
 									style={{
 										marginLeft: 5,
-										color: Colors.black,
 									}}
 								>
 									Login here
@@ -156,33 +131,3 @@ export default function ({
 		</KeyboardAvoidingView>
 	);
 }
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		flexDirection: 'column',
-	},
-	textInputContainer: {
-		marginTop: 15,
-		backgroundColor: '#FFF',
-		borderColor: '#d8d8d8',
-		borderWidth: 1,
-		borderRadius: 8,
-		flexDirection: 'row',
-	},
-	textInput: {
-		padding: 10,
-		paddingHorizontal: 20,
-		textAlign: 'left',
-		color: 'black',
-		flex: 1,
-		fontFamily: 'Ubuntu_400Regular',
-	},
-	button: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-		padding: 15,
-		backgroundColor: Colors.primary,
-		borderRadius: 8,
-	},
-});

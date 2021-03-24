@@ -7,9 +7,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import Main from './MainStack';
 import Auth from './AuthStack';
 import Loading from '../screens/utils/Loading';
+
+// Better put your these secret keys in .env file
 const firebaseConfig = {
 	apiKey: '',
 	authDomain: '',
+	databaseURL: '',
 	projectId: '',
 	storageBucket: '',
 	messagingSenderId: '',
