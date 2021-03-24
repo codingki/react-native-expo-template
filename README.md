@@ -11,13 +11,22 @@ Bonus Snap Midtrans payment gateway😘
 **Firebase auth flow**
 ![media/authflow.png](media/authflow.png)
 
-## Update
+## Changelog
 
-- Now all the UI components uses (Rapi UI)[https://rapi-ui.kikiding.space/] (24/03/2021)
-- Fixed some bugs and file managements moved to `src/` directory (24/03/2021)
-- Added typescript bottom tabs with supabase auth flow template (21/01/2021)
-- Updated to expo sdk 40 (21/01/2021)
-- Typescript bottom tabs with auth flow template added (08/12/2020)
+**24/03/2021**
+
+- Now all the UI components uses [Rapi UI](https://rapi-ui.kikiding.space/)
+- Remove some unused packages
+- Fixed some bugs and file managements moved to `src/` directory
+
+**21/01/2021**
+
+- Added typescript bottom tabs with supabase auth flow template
+- Updated to expo sdk 40
+
+**08/12/2020**
+
+- Typescript bottom tabs with auth flow template added
 
 ## Rapi UI
 
