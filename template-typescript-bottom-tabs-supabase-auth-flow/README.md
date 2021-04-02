@@ -30,7 +30,7 @@ Typescript Template starter with React Navigation Bottom Tabs and Firebase auth 
 
 # Auth Flow
 
-### Firebase Setup
+### Supabase Setup
 
 - Set up a new Supabase.io project
 - Fill your supabase credentials to your config inside `./src/initSupabase.ts`
