@@ -1,6 +1,6 @@
 # Template bottom tabs with auth flow (Typescript)
 
-Typescript Template starter with React Navigation Bottom Tabs and Firebase auth using React Context
+Typescript Template starter with React Navigation Bottom Tabs and Supabase auth using React Context
 
 # Preview
 
@@ -50,7 +50,7 @@ and you good to go!
 
 ### Prebuilt UI Screens
 
-There are 3 screens included inside `./src/screens/auth` and one more thing its included with the firebase auth function, so you don't need to create the function. The ilustrations I use [undraw](https://undraw.co/)
+There are 3 screens included inside `./src/screens/auth` and one more thing its included with the supabase auth function, so you don't need to create the function. The ilustrations I use [undraw](https://undraw.co/)
 
 - Login screen `./src/screens/auth/login.tsx`
 - Register screen `./src/screens/auth/register.tsx`
