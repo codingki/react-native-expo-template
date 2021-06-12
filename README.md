@@ -5,6 +5,7 @@ These are my starter templates or my way for building mobile app with react nati
 ## Preview
 
 ![media/thumbnail.gif](media/thumbnail.gif)
+
 If you are looking for react native midtrans example, I moved it [here](https://github.com/codingki/react-native-midtrans-example)
 
 **Firebase auth flow**
