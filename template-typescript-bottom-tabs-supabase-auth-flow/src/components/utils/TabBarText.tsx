@@ -1,22 +1,21 @@
-import React from 'react';
-import { Text, theme } from 'react-native-rapi-ui';
-
-interface Props {
-	focused: boolean;
-	title: string;
-}
-
-export default (props: Props) => {
-	return (
-		<Text
-			fontWeight="bold"
-			style={{
-				marginBottom: 5,
-				color: props.focused ? theme.primary : 'rgb(143, 155, 179)',
-				fontSize: 10,
-			}}
-		>
-			{props.title}
-		</Text>
-	);
+import React from "react";
+import { Text, themeColor, useTheme } from "react-native-rapi-ui";
+export default ({ title, focused }: { title: string; focused: boolean }) => {
+  const { isDarkmode } = useTheme();
+  return (
+    <Text
+      fontWeight="bold"
+      style={{
+        marginBottom: 5,
+        color: focused
+          ? isDarkmode
+            ? themeColor.white100
+            : themeColor.primary
+          : "rgb(143, 155, 179)",
+        fontSize: 10,
+      }}
+    >
+      {title}
+    </Text>
+  );
 };

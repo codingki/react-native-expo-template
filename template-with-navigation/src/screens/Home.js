@@ -22,7 +22,7 @@ export default function ({ navigation }) {
           <Ionicons
             name={isDarkmode ? "sunny" : "moon"}
             size={20}
-            color={isDarkmode ? themeColor.white100 : "#191921"}
+            color={isDarkmode ? themeColor.white100 : themeColor.dark}
           />
         }
         rightAction={() => {

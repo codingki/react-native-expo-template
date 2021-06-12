@@ -71,8 +71,8 @@ const MainTabs = () => {
       tabBarOptions={{
         style: {
           borderTopWidth: 1,
-          borderTopColor: isDarkmode ? "#383b4d" : "#c0c0c0",
-          backgroundColor: isDarkmode ? "#262834" : "#fff",
+          borderTopColor: isDarkmode ? themeColor.dark100 : "#c0c0c0",
+          backgroundColor: isDarkmode ? themeColor.dark200 : "#ffffff",
         },
       }}
     >

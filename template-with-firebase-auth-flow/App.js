@@ -1,7 +1,7 @@
 import React from "react";
 import AppNavigator from "./src/navigation/AppNavigator";
 import { AuthProvider } from "./src/provider/AuthProvider";
-import { ThemeProvider, useTheme } from "react-native-rapi-ui";
+import { ThemeProvider } from "react-native-rapi-ui";
 
 export default function App(props) {
   const images = [
@@ -12,9 +12,8 @@ export default function App(props) {
     require("./assets/forget.png"),
   ];
 
-  const { setTheme } = useTheme();
   return (
-    <ThemeProvider theme="light" setTheme={setTheme} images={images}>
+    <ThemeProvider images={images}>
       <AuthProvider>
         <AppNavigator />
       </AuthProvider>

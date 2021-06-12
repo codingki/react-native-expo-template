@@ -1,11 +1,10 @@
 import React from "react";
 import AppNavigator from "./src/navigation/AppNavigator";
-import { ThemeProvider, useTheme } from "react-native-rapi-ui";
+import { ThemeProvider } from "react-native-rapi-ui";
 
-export default function App(props) {
-  const { setTheme } = useTheme();
+export default function App() {
   return (
-    <ThemeProvider theme="light" setTheme={setTheme}>
+    <ThemeProvider>
       <AppNavigator />
     </ThemeProvider>
   );

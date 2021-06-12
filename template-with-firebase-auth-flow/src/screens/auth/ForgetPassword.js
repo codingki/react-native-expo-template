@@ -9,9 +9,17 @@ import {
 } from "react-native";
 import * as firebase from "firebase";
 
-import { Layout, Text, TextInput, Button } from "react-native-rapi-ui";
+import {
+  Layout,
+  Text,
+  TextInput,
+  Button,
+  useTheme,
+  themeColor,
+} from "react-native-rapi-ui";
 
 export default function ({ navigation }) {
+  const { isDarkmode, setTheme } = useTheme();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -32,7 +40,6 @@ export default function ({ navigation }) {
   }
   return (
     <KeyboardAvoidingView behavior="height" enabled style={{ flex: 1 }}>
-      <StatusBar style="auto" translucent backgroundColor="#f7f7f7" />
       <Layout>
         <ScrollView
           contentContainerStyle={{
@@ -44,7 +51,7 @@ export default function ({ navigation }) {
               flex: 1,
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "#f7f7f7",
+              backgroundColor: isDarkmode ? "#17171E" : themeColor.white100,
             }}
           >
             <Image
@@ -61,7 +68,7 @@ export default function ({ navigation }) {
               flex: 3,
               paddingHorizontal: 20,
               paddingBottom: 20,
-              backgroundColor: "#fff",
+              backgroundColor: isDarkmode ? themeColor.dark : themeColor.white,
             }}
           >
             <Text
@@ -118,6 +125,30 @@ export default function ({ navigation }) {
                   }}
                 >
                   Login here
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                marginTop: 30,
+                justifyContent: "center",
+              }}
+            >
+              <TouchableOpacity
+                onPress={() => {
+                  isDarkmode ? setTheme("light") : setTheme("dark");
+                }}
+              >
+                <Text
+                  size="md"
+                  fontWeight="bold"
+                  style={{
+                    marginLeft: 5,
+                  }}
+                >
+                  {isDarkmode ? "☀️ light theme" : "🌑 dark theme"}
                 </Text>
               </TouchableOpacity>
             </View>
