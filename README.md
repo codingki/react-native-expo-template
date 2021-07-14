@@ -34,6 +34,11 @@ Check the [documentation](https://rapi-ui.kikiding.space/docs/) for usage and mo
 
 ## Changelog
 
+**15/07/2021**
+
+- Fix firebase import error
+- Upgrade Expo SDK to v42.0
+
 **13/06/2021**
 
 - Template now has darkmode
