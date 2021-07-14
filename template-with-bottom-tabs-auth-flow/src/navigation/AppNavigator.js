@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import * as firebase from "firebase";
+import firebase from "firebase/app";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
