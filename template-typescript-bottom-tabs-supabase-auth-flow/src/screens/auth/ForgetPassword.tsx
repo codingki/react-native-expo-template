@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { supabase } from "../../initSupabase";
 import { AuthStackParamList } from "../../types/navigation";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { StackScreenProps } from "@react-navigation/stack";
 import {
   Layout,
   Text,
@@ -21,7 +21,7 @@ import {
 
 export default function ({
   navigation,
-}: NativeStackScreenProps<AuthStackParamList, "ForgetPassword">) {
+}: StackScreenProps<AuthStackParamList, "ForgetPassword">) {
   const { isDarkmode, setTheme } = useTheme();
   const [email, setEmail] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);

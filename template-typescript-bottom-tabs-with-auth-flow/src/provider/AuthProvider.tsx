@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import * as firebase from "firebase";
 
 type ContextProps = {
   user: null | boolean;
@@ -12,7 +12,6 @@ interface Props {
 }
 
 const AuthProvider = (props: Props) => {
-  const auth = getAuth();
   // user null = loading
   const [user, setUser] = useState<null | boolean>(null);
 
@@ -21,7 +20,7 @@ const AuthProvider = (props: Props) => {
   }, []);
 
   function checkLogin() {
-    onAuthStateChanged(auth, function (u) {
+    firebase.default.auth().onAuthStateChanged(function (u) {
       if (u) {
         setUser(true);
         // getUserData();

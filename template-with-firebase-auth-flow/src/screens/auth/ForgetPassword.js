@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
   TouchableOpacity,
@@ -6,7 +7,8 @@ import {
   KeyboardAvoidingView,
   Image,
 } from "react-native";
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import * as firebase from "firebase";
+
 import {
   Layout,
   Text,
@@ -18,13 +20,14 @@ import {
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
-  const auth = getAuth();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function forget() {
     setLoading(true);
-    await sendPasswordResetEmail(auth, email)
+    await firebase
+      .auth()
+      .sendPasswordResetEmail(email)
       .then(function () {
         setLoading(false);
         navigation.navigate("Login");

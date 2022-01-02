@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { initializeApp, getApps } from "firebase/app";
+import firebase from "firebase/app";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import { AuthContext } from "../provider/AuthProvider";
 
 // Main
@@ -25,11 +25,11 @@ const firebaseConfig = {
   messagingSenderId: "",
   appId: "",
 };
-if (getApps().length === 0) {
-  initializeApp(firebaseConfig);
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
 }
 
-const AuthStack = createNativeStackNavigator();
+const AuthStack = createStackNavigator();
 
 const Auth = () => {
   return (
@@ -45,7 +45,7 @@ const Auth = () => {
   );
 };
 
-const MainStack = createNativeStackNavigator();
+const MainStack = createStackNavigator();
 
 const Main = () => {
   return (

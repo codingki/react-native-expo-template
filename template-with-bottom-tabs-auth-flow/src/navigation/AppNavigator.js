@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { initializeApp, getApps } from "firebase/app";
+import firebase from "firebase/app";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { useTheme, themeColor } from "react-native-rapi-ui";
@@ -30,11 +30,11 @@ const firebaseConfig = {
   appId: "",
 };
 
-if (getApps().length === 0) {
-  initializeApp(firebaseConfig);
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
 }
 
-const AuthStack = createNativeStackNavigator();
+const AuthStack = createStackNavigator();
 const Auth = () => {
   return (
     <AuthStack.Navigator
@@ -49,7 +49,7 @@ const Auth = () => {
   );
 };
 
-const MainStack = createNativeStackNavigator();
+const MainStack = createStackNavigator();
 const Main = () => {
   return (
     <MainStack.Navigator
@@ -68,9 +68,9 @@ const MainTabs = () => {
   const { isDarkmode } = useTheme();
   return (
     <Tabs.Navigator
-      screenOptions={{
-        headerShown: false,
-        tabBarStyle: {
+      tabBarOptions={{
+        style: {
+          borderTopWidth: 1,
           borderTopColor: isDarkmode ? themeColor.dark100 : "#c0c0c0",
           backgroundColor: isDarkmode ? themeColor.dark200 : "#ffffff",
         },

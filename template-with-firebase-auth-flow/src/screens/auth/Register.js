@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
   TouchableOpacity,
@@ -6,7 +7,8 @@ import {
   KeyboardAvoidingView,
   Image,
 } from "react-native";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import * as firebase from "firebase";
+
 import {
   Layout,
   Text,
@@ -18,23 +20,23 @@ import {
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
-  const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function register() {
     setLoading(true);
-    await createUserWithEmailAndPassword(auth, email, password).catch(function (
-      error
-    ) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-      setLoading(false);
-      alert(errorMessage);
-    });
+    await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        setLoading(false);
+        alert(errorMessage);
+      });
   }
 
   return (

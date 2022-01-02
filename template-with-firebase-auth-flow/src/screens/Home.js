@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Linking } from "react-native";
-import { getAuth, signOut } from "firebase/auth";
+import * as firebase from "firebase";
 import {
   Layout,
   Button,
@@ -15,7 +15,6 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
-  const auth = getAuth();
   return (
     <Layout>
       <TopNav
@@ -66,7 +65,7 @@ export default function ({ navigation }) {
               status="danger"
               text="Logout"
               onPress={() => {
-                signOut(auth);
+                firebase.auth().signOut();
               }}
               style={{
                 marginTop: 10,
