@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
   TouchableOpacity,
@@ -7,10 +6,9 @@ import {
   KeyboardAvoidingView,
   Image,
 } from "react-native";
-import * as firebase from "firebase";
 import { AuthStackParamList } from "../../types/navigation";
-import { StackScreenProps } from "@react-navigation/stack";
-
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {
   Layout,
   Text,
@@ -22,16 +20,15 @@ import {
 
 export default function ({
   navigation,
-}: StackScreenProps<AuthStackParamList, "ForgetPassword">) {
+}: NativeStackScreenProps<AuthStackParamList, "ForgetPassword">) {
   const { isDarkmode, setTheme } = useTheme();
+  const auth = getAuth();
   const [email, setEmail] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   async function forget() {
     setLoading(true);
-    await firebase.default
-      .auth()
-      .sendPasswordResetEmail(email)
+    await sendPasswordResetEmail(auth, email)
       .then(function () {
         setLoading(false);
         navigation.navigate("Login");

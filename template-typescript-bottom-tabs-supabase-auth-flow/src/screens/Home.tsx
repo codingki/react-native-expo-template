@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Linking } from "react-native";
 import { MainStackParamList } from "../types/navigation";
-import { StackScreenProps } from "@react-navigation/stack";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { supabase } from "../initSupabase";
 import {
   Layout,
@@ -17,7 +17,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function ({
   navigation,
-}: StackScreenProps<MainStackParamList, "MainTabs">) {
+}: NativeStackScreenProps<MainStackParamList, "MainTabs">) {
   const { isDarkmode, setTheme } = useTheme();
   return (
     <Layout>
