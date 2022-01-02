@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { StatusBar } from "expo-status-bar";
 import {
   ScrollView,
   TouchableOpacity,
@@ -7,9 +6,9 @@ import {
   KeyboardAvoidingView,
   Image,
 } from "react-native";
-import * as firebase from "firebase";
 import { AuthStackParamList } from "../../types/navigation";
-import { StackScreenProps } from "@react-navigation/stack";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {
   Layout,
   Text,
@@ -21,25 +20,25 @@ import {
 
 export default function ({
   navigation,
-}: StackScreenProps<AuthStackParamList, "Login">) {
+}: NativeStackScreenProps<AuthStackParamList, "Login">) {
   const { isDarkmode, setTheme } = useTheme();
+  const auth = getAuth();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   async function login() {
     setLoading(true);
-    await firebase.default
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        setLoading(false);
-        alert(errorMessage);
-      });
+    await signInWithEmailAndPassword(auth, email, password).catch(function (
+      error
+    ) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+      setLoading(false);
+      alert(errorMessage);
+    });
   }
   return (
     <KeyboardAvoidingView behavior="height" enabled style={{ flex: 1 }}>

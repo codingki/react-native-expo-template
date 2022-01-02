@@ -34,6 +34,12 @@ Check the [documentation](https://rapi-ui.kikiding.space/docs/) for usage and mo
 
 ## Changelog
 
+**03/01/2022**
+
+- Upgrade Expo SDK to v44.0 (latest)
+- Upgrade Firebase from v8.x -> v9.x (latest)
+- Updgrade React navigation from v5.x -> v6.x (latest)
+
 **15/07/2021**
 
 - Fix firebase import error
@@ -53,15 +59,6 @@ Check the [documentation](https://rapi-ui.kikiding.space/docs/) for usage and mo
 - Now all the UI components uses [Rapi UI](https://rapi-ui.kikiding.space/)
 - Remove some unused packages
 - Fixed some bugs and file managements moved to `src/` directory
-
-**21/01/2021**
-
-- Added typescript bottom tabs with supabase auth flow template
-- Updated to expo sdk 40
-
-**08/12/2020**
-
-- Typescript bottom tabs with auth flow template added
 
 if you find these useful don't forget to give it a star ⭐ and share it to your friends ❤️
 

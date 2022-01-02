@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { themeColor, useTheme } from "react-native-rapi-ui";
@@ -12,7 +12,7 @@ import SecondScreen from "../screens/SecondScreen";
 import About from "../screens/About";
 import Profile from "../screens/Profile";
 
-const MainStack = createStackNavigator();
+const MainStack = createNativeStackNavigator();
 const Main = () => {
   return (
     <MainStack.Navigator
@@ -31,9 +31,9 @@ const MainTabs = () => {
   const { isDarkmode } = useTheme();
   return (
     <Tabs.Navigator
-      tabBarOptions={{
-        style: {
-          borderTopWidth: 1,
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
           borderTopColor: isDarkmode ? themeColor.dark100 : "#c0c0c0",
           backgroundColor: isDarkmode ? themeColor.dark200 : "#ffffff",
         },

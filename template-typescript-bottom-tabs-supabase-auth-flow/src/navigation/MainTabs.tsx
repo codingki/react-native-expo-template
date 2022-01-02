@@ -14,11 +14,11 @@ const MainTabs = () => {
   const { isDarkmode } = useTheme();
   return (
     <Tabs.Navigator
-      tabBarOptions={{
-        style: {
-          borderTopWidth: 1,
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
           borderTopColor: isDarkmode ? themeColor.dark100 : "#c0c0c0",
-          backgroundColor: isDarkmode ? themeColor.dark200 : "#fff",
+          backgroundColor: isDarkmode ? themeColor.dark200 : "#ffffff",
         },
       }}
     >

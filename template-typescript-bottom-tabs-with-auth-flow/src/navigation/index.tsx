@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import firebase from "firebase/app";
+import { getApps, initializeApp } from "firebase/app";
 import { AuthContext } from "../provider/AuthProvider";
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -18,8 +18,8 @@ const firebaseConfig = {
   messagingSenderId: "",
   appId: "",
 };
-if (firebase.apps.length === 0) {
-  firebase.initializeApp(firebaseConfig);
+if (getApps().length === 0) {
+  initializeApp(firebaseConfig);
 }
 
 export default () => {
