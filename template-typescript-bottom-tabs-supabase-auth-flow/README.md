@@ -22,7 +22,7 @@ Typescript Template starter with React Navigation Bottom Tabs and Supabase auth 
    npm install
    ```
 
-5. Start the environtment
+5. Start the environment
 
    ```jsx
    expo start
