@@ -33,17 +33,19 @@ Typescript Template starter with React Navigation Bottom Tabs and Supabase auth 
 ### Supabase Setup
 
 - Set up a new Supabase.io project
-- Fill your supabase credentials to your config inside `./src/initSupabase.ts`
+- Copy .env.example to .env
+- Fill your supabase credentials to your .env file inside (`SUPERBASE_URL` and `SUPERBASE_KEY`)
 - You can find your supabase credentials in your project -> settings -> API
 
   ```jsx
-  // Better put your these secret keys in .env file
-  export const supabase = createClient(
-  	"supabaseUrl", "supabaseKey",
-  	{
-  		localStorage: AsyncStorage as any,
-  	}
-  );
+  export const supabase = createClient(superbaseUrl, superbaseKey, {
+   auth: {
+      storage: AsyncStorage,
+      autoRefreshToken: true,
+      persistSession: true,
+      detectSessionInUrl: false,
+   },
+   });
   ```
 
 and you good to go!
@@ -104,3 +106,6 @@ These are the folders and the functionality all in `src/`
 if you find these useful don't forget to give it a star ⭐ and share it to your friends ❤️
 
 Reach me on [twitter](https://twitter.com/kikiding/)
+
+# Notes
+1. When .env file is updated, the `env.d.ts` needs to be updated accordingly. This is done to avoid TypeScript complaining about type error.

@@ -29,11 +29,11 @@ export default function ({
 
   async function register() {
     setLoading(true);
-    const { user, error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email: email,
       password: password,
     });
-    if (!error && !user) {
+    if (!error && !data.user) {
       setLoading(false);
       alert("Check your email for the login link!");
     }
@@ -91,7 +91,7 @@ export default function ({
               placeholder="Enter your email"
               value={email}
               autoCapitalize="none"
-              autoCompleteType="off"
+              autoComplete="off"
               autoCorrect={false}
               keyboardType="email-address"
               onChangeText={(text) => setEmail(text)}
@@ -103,7 +103,7 @@ export default function ({
               placeholder="Enter your password"
               value={password}
               autoCapitalize="none"
-              autoCompleteType="off"
+              autoComplete="off"
               autoCorrect={false}
               secureTextEntry={true}
               onChangeText={(text) => setPassword(text)}
