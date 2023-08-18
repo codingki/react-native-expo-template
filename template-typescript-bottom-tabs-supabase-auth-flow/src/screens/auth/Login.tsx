@@ -20,7 +20,7 @@ import {
   themeColor,
 } from "react-native-rapi-ui";
 
-export default function ({
+export default function Login({
   navigation,
 }: NativeStackScreenProps<AuthStackParamList, "Login">) {
   const { isDarkmode, setTheme } = useTheme();
@@ -30,11 +30,11 @@ export default function ({
 
   async function login() {
     setLoading(true);
-    const { user, error } = await supabase.auth.signIn({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
     });
-    if (!error && !user) {
+    if (!error && !data.user) {
       setLoading(false);
       alert("Check your email for the login link!");
     }
@@ -92,7 +92,7 @@ export default function ({
               placeholder="Enter your email"
               value={email}
               autoCapitalize="none"
-              autoCompleteType="off"
+              autoComplete="off"
               autoCorrect={false}
               keyboardType="email-address"
               onChangeText={(text) => setEmail(text)}
@@ -104,7 +104,7 @@ export default function ({
               placeholder="Enter your password"
               value={password}
               autoCapitalize="none"
-              autoCompleteType="off"
+              autoComplete="off"
               autoCorrect={false}
               secureTextEntry={true}
               onChangeText={(text) => setPassword(text)}

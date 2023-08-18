@@ -8,8 +8,9 @@ import TabBarText from "../components/utils/TabBarText";
 import Home from "../screens/Home";
 import About from "../screens/About";
 import Profile from "../screens/Profile";
+import { MainTabsParamList } from "../types/navigation";
 
-const Tabs = createBottomTabNavigator();
+const Tabs = createBottomTabNavigator<MainTabsParamList>();
 const MainTabs = () => {
   const { isDarkmode } = useTheme();
   return (
@@ -25,7 +26,7 @@ const MainTabs = () => {
       {/* these icons using Ionicons */}
       <Tabs.Screen
         name="Home"
-        component={Home}
+        component={Home as any}
         options={{
           tabBarLabel: ({ focused }) => (
             <TabBarText focused={focused} title="Home" />
@@ -37,7 +38,7 @@ const MainTabs = () => {
       />
       <Tabs.Screen
         name="Profile"
-        component={Profile}
+        component={Profile as any}
         options={{
           tabBarLabel: ({ focused }) => (
             <TabBarText focused={focused} title="Profile" />
@@ -49,7 +50,7 @@ const MainTabs = () => {
       />
       <Tabs.Screen
         name="About"
-        component={About}
+        component={About as any}
         options={{
           tabBarLabel: ({ focused }) => (
             <TabBarText focused={focused} title="About" />

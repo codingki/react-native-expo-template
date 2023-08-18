@@ -28,7 +28,7 @@ export default function ({
 
   async function forget() {
     setLoading(true);
-    const { data, error } = await supabase.auth.api.resetPasswordForEmail(
+    const { data, error } = await supabase.auth.resetPasswordForEmail(
       email
     );
     if (!error) {
@@ -89,7 +89,7 @@ export default function ({
               placeholder="Enter your email"
               value={email}
               autoCapitalize="none"
-              autoCompleteType="off"
+              autoComplete="off"
               autoCorrect={false}
               keyboardType="email-address"
               onChangeText={(text) => setEmail(text)}

@@ -3,8 +3,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import SecondScreen from "../screens/SecondScreen";
 import MainTabs from "./MainTabs";
+import { MainStackParamList } from "../types/navigation";
 
-const MainStack = createNativeStackNavigator();
+const MainStack = createNativeStackNavigator<MainStackParamList>();
 const Main = () => {
   return (
     <MainStack.Navigator
